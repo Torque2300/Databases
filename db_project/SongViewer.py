@@ -5,7 +5,7 @@ from lyrics_extractor import SongLyrics
 class SongViewer:
 
     def __init__(self, host: str, database: str, user: str, password: str):
-        self.song_lyrics = SongLyrics('AIzaSyDL4fhbi9LERocW7aR757jjeMwStmJ93iY', '1252911fd5bd342f1')
+        self.song_lyrics = SongLyrics('example', 'example')
         try:
             self.connection = psycopg2.connect(host=host, database=database, user=user, password=password)
             self.cursor = self.connection.cursor()
@@ -228,7 +228,7 @@ class SongViewer:
             raise error
 
 
-ab = SongViewer('localhost', 'db_project', 'postgres', 'garmagenus2300')
+ab = SongViewer('localhost', 'db_project', 'postgres', 'password')
 # ab.add_song('Bair', '123', 'Хаски', 'Бог войны')
 # ab.get_lyrics('Bair', '123', 'Хаски', 'Бит ш')
 # ab.add_song_to_playlist('Bair', '123', 'Yeahy', 'Nirvana', 'Lithium')
